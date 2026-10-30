@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#4471 · split into two causes</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; color: #333; }
+    h1 { border-bottom: 2px solid #ccc; padding-bottom: 0.5rem; }
+    h2 { margin-top: 2rem; color: #555; }
+    code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>#4471 · split into two causes</h1>
+
+  <h2>Analysis: Two Distinct Causes</h2>
+  
+  <p>The 427 reports in #4471 are not one problem, but two:</p>
+
+  <h3>Cause 1: Parser (414 reports)</h3>
+  <p>Date parser reads MM/DD regardless of locale, causing day/month swaps for all day-first locales.</p>
+  <p><strong>GitHub Issue:</strong> <a href="https://github.com/piotrczarnak/mega/issues/71">#71</a></p>
+
+  <h3>Cause 2: Hint (13 reports)</h3>
+  <p>booking-v3 form shows MM/DD hint to day-first locale users, misleading them into swapping day/month.</p>
+  <p><strong>GitHub Issue:</strong> <a href="https://github.com/piotrczarnak/mega/issues/72">#72</a></p>
+
+</body>
+</html>

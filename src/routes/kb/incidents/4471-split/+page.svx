@@ -1,0 +1,35 @@
+---
+layout: runbook
+title: '#4471 · split into two causes'
+owner: Codex harness
+status: split
+reviewed: 2026-10-29
+signature: v1.eyJzdWIiOiIyMjg0IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMzMDc1NTMsImV4cCI6MTc5MzM5Mzk1M30.4kW7zqOhuqvfrj2whCA1hOYO7NjOQNcAupYAewVFAKY
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+## Analysis: Two Distinct Causes
+
+The 427 reports in #4471 are not one problem, but two:
+
+### Cause 1: Parser (414 reports)
+Date parser reads MM/DD regardless of locale, causing day/month swaps for all day-first locales.
+
+**GitHub Issue:** https://github.com/piotrczarnak/mega/issues/71
+
+### Cause 2: Hint (13 reports)
+booking-v3 form shows MM/DD hint to day-first locale users, misleading them into swapping day/month.
+
+**GitHub Issue:** https://github.com/piotrczarnak/mega/issues/72
+
+## Reports by Cause
+
+<CauseTable ticket={4471} />
+
+---
+
+<RenderStamp {signature} />
