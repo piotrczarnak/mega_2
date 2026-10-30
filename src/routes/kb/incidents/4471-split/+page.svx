@@ -19,12 +19,12 @@ The 427 reports in #4471 are not one problem, but two:
 ### Cause 1: Parser (414 reports)
 Date parser reads MM/DD regardless of locale, causing day/month swaps for all day-first locales.
 
-**GitHub Issue:** https://github.com/piotrczarnak/mega/issues/71
+**GitHub Issue:** https://github.com/piotrczarnak/mega/issues/20
 
 ### Cause 2: Hint (13 reports)
 booking-v3 form shows MM/DD hint to day-first locale users, misleading them into swapping day/month.
 
-**GitHub Issue:** https://github.com/piotrczarnak/mega/issues/72
+**GitHub Issue:** https://github.com/piotrczarnak/mega/issues/21
 
 ## Reports by Cause
 
